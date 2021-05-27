@@ -4,7 +4,7 @@ import "./contact.css";
 import "./map.css";
 import {apiKey} from './api-key.js'
 import GoogleMapReact from 'google-map-react'
-function Contact({img, name, text}) {
+function Contact() {
     const location = {
         address: '4666 Stroher Street, Cityfake, Fakestate',
         lat: 37.42216,
