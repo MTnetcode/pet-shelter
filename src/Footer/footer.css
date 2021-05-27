@@ -1,0 +1,22 @@
+footer{
+    border-top: solid .3rem #9D6934;
+    margin-top: 4rem;
+    position: relative;
+}
+.footer-p{
+    font-weight: 200;
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem;
+
+}
+.social{
+    color: black;
+    position: absolute;
+    right: 1rem;
+    bottom: .0rem;
+   
+}
+.social i{
+    margin: 0 .5rem;
+}

@@ -1,0 +1,34 @@
+.news{
+    font-weight: 700;
+    color: #9D6934;
+    font-size: 4rem;
+    text-align: center;
+    margin: 1.5rem;
+}
+.news-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem 3rem;
+}
+.news-header{
+color: white;
+font-size: 2.5rem;
+font-weight: 600;
+}
+.news-paragraph{
+    font-weight: 300;
+    color: white;
+ 
+    font-size: .8rem;
+    margin-top: .5rem;
+    padding-right: 5rem;
+}
+.box{
+    background-color: #9D6934;
+    padding: 1.5rem;
+
+    flex-basis: 35%;
+    border-radius: .5rem;
+}

@@ -1,0 +1,46 @@
+.pets{
+margin: 3rem;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: center;
+gap: 3rem;
+
+}
+.pets div{
+    flex-basis: 45%;
+}
+.pet-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #EFEEF1;
+
+
+   
+}
+
+.pet-flex div{
+    flex-basis: 45%;
+}
+
+.img{
+    height: 15rem;
+}
+.info{
+    margin-top: 1rem;
+}
+
+.name{
+    font-size: 3rem;
+    font-weight: 600;
+  
+}
+.pet-paragraph{
+    font-size: .8rem;
+    font-weight: 300;
+    
+}
+em{
+    font-weight: 800;
+}
