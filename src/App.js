@@ -6,6 +6,8 @@ import Footer from "./Footer/footer.js";
 import Pets from "./components/Pets/Pets.js"
 import AboutUs from "./components/about-us/AboutUs.js"
 import Contact from "./components/contact/contact.js"
+import PetsInfo from "./components/pets-info/petsInfo.js"
+import Login from "./components/Login/Login.js"
 function App() {
   return (
     <div>
@@ -37,6 +39,17 @@ function App() {
             <Contact />
             <Footer />
           </Route>
+          <Route path="/info">
+           
+            <PetsInfo />
+       
+          </Route>
+
+          <Route path="/login">
+           
+           <Login />
+      
+         </Route>
         </Switch>
       </BrowserRouter>
     </div>

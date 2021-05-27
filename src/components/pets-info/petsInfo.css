@@ -1,0 +1,48 @@
+.info-box{
+    background-color: #EFEEF1;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 80vh;
+        margin: 0 auto;
+        position: relative;
+}
+.fa-times{
+ position: absolute;
+ right: 1rem;
+}
+
+.info-box div{
+      flex-basis: 45%;
+}
+.name{
+    font-size: 3rem;
+    font-weight: 600;
+  margin: 1rem 0;
+}
+.p{
+    font-size: 1rem;
+    margin: 1 0rem;
+}
+.i1{
+   height: 20vh;
+   display: block; 
+}
+.i2{
+    height: 20vh;
+    display: block; 
+ }
+ .i3{
+    height: 20vh;
+
+    display: block; 
+ }
+.link{
+    color: black;
+}
+strong{
+    color: black;
+}
+
+    
+ 

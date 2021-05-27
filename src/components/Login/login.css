@@ -1,0 +1,48 @@
+.login{
+   background-image: url(./login.svg);
+   background-color: black;
+   height: 100vh;
+   position: relative;
+   
+}
+.form{
+    
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50% -50%);
+    width: 20%;
+  
+   
+}
+.login-header{
+
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+.login-inp{
+
+    display: block;
+    background-color: hsla(0, 0%, 100%, 0.514);
+    color: #9A8C8C;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+    margin: 1rem 0;
+
+}
+.login-btn{
+    margin: 0 auto;
+    
+    background-color: rgba(255, 255, 255, 0);
+    border: white solid .2rem;
+    color: white;
+    padding: .4rem;
+    width: 100%;
+}
+.login-btn:hover{
+    background-color: white;
+    color: black;
+}

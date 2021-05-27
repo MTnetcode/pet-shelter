@@ -1,6 +1,6 @@
 import React from "react";
 import "./aboutUs.css";
-function AboutUs({img, name, text}) {
+function AboutUs() {
 
   return (
       <div>
