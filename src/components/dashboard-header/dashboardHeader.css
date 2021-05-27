@@ -1,0 +1,39 @@
+.dashboard{
+    background-image: url(./dasboard.svg);
+    height: 95vh;
+    background-size: cover;
+    padding: 0.3rem;
+    position: relative;
+}
+.logout{
+position: absolute;
+right: 1rem;
+font-size: .8rem;
+color: white;
+}
+.h1-dashboard{
+position: absolute;
+font-size: 8rem;
+top: 30%;
+left: 30%;
+transform: translate(-50% -50%);
+color: white;
+}
+.links-dashboard{
+    border: 0.2rem solid white;
+    border-radius: 0.5rem;
+padding:.5rem ;
+position: absolute;
+top: 69%;
+width: 99.5%;
+
+}
+li {
+    display: inline-block;
+    list-style: none;
+
+    font-weight: 400;
+  color: white;
+  font-size: 3rem;
+  margin: 0 13%;
+  }

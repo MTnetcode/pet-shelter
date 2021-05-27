@@ -8,6 +8,7 @@ import AboutUs from "./components/about-us/AboutUs.js"
 import Contact from "./components/contact/contact.js"
 import PetsInfo from "./components/pets-info/petsInfo.js"
 import Login from "./components/Login/Login.js"
+import DashboardHeader from "./components/dashboard-header/dashboardHeader.js"
 function App() {
   return (
     <div>
@@ -48,6 +49,12 @@ function App() {
           <Route path="/login">
            
            <Login />
+      
+         </Route>
+
+         <Route path="/dashboard-news">
+           
+           <DashboardHeader />
       
          </Route>
         </Switch>
