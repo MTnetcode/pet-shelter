@@ -1,6 +1,6 @@
 .dashboard{
     background-image: url(./dasboard.svg);
-    height: 95vh;
+    height: 70vh;
     background-size: cover;
     padding: 0.3rem;
     position: relative;
@@ -24,7 +24,7 @@ color: white;
     border-radius: 0.5rem;
 padding:.5rem ;
 position: absolute;
-top: 69%;
+top: 87%;
 width: 99.5%;
 
 }

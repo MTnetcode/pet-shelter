@@ -1,0 +1,40 @@
+.plus{
+    margin: 2rem auto;
+    border-radius: 10rem;
+    background-color: #EFEEF1;
+    width: 5rem;
+    height: 5rem;
+
+}
+.fa-plus{
+
+    font-size: 3rem;
+    margin: 1rem 1.2rem;
+    
+
+}
+
+.fachange{
+margin: .5rem;
+}
+.change{
+    position: absolute;
+    right: 2rem;
+
+}
+.news-box{
+    background-color: #EFEEF1;
+    margin: 2rem auto;
+    width: 90vw;
+    padding: 1rem;
+    position: relative;
+
+}
+.name{
+   font-size: 3rem;
+    font-weight: 600;
+}
+.p-news{
+   font-size: .8rem;
+    font-weight: 300;
+}

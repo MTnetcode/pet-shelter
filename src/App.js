@@ -9,6 +9,8 @@ import Contact from "./components/contact/contact.js"
 import PetsInfo from "./components/pets-info/petsInfo.js"
 import Login from "./components/Login/Login.js"
 import DashboardHeader from "./components/dashboard-header/dashboardHeader.js"
+import NewsDashboard from "./components/news-dashboard/NewsDashboard.js"
+import PetsDashboard from "./components/pets-dashboard/PetsDashboard.js";
 function App() {
   return (
     <div>
@@ -55,6 +57,19 @@ function App() {
          <Route path="/dashboard-news">
            
            <DashboardHeader />
+           <NewsDashboard />
+      
+         </Route>
+         <Route path="/dashboard-dogs">
+           
+           <DashboardHeader />
+           <PetsDashboard />
+      
+         </Route>
+         <Route path="/dashboard-cats">
+           
+           <DashboardHeader />
+           <PetsDashboard />
       
          </Route>
         </Switch>
