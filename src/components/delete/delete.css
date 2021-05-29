@@ -1,0 +1,20 @@
+.delete{
+    background-color: #EFEEF1;
+    width: 40%;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+.h1-delete{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.btn-delete{
+    border: solid .15rem #9D6934 ;
+    color: #9D6934;
+    padding: .3rem 2rem;
+    font-size: 1rem;
+    margin: 1.5rem .5rem;
+
+}

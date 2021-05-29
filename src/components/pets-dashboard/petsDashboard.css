@@ -1,4 +1,13 @@
-.pets{
+
+    .plus{
+        margin: 2rem auto;
+        border-radius: 10rem;
+        background-color: #EFEEF1;
+        width: 5rem;
+        height: 5rem;
+    
+    }
+    .pets{
     margin: 3rem;
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +15,17 @@
     justify-content: center;
     gap: 3rem;
     
+    
     }
+
+    .fa-plus{
+    
+        font-size: 3rem;
+        margin: 1rem 1.2rem;
+        
+    
+    }
+
     .pets div{
         flex-basis: 45%;
     }

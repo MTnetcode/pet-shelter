@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import News from "./News/News.js";
@@ -11,6 +11,8 @@ import Login from "./components/Login/Login.js"
 import DashboardHeader from "./components/dashboard-header/dashboardHeader.js"
 import NewsDashboard from "./components/news-dashboard/NewsDashboard.js"
 import PetsDashboard from "./components/pets-dashboard/PetsDashboard.js";
+import Delete from "./components/delete/delete.js"
+import Post from "./components/post/post.js"
 function App() {
   return (
     <div>
@@ -70,6 +72,16 @@ function App() {
            
            <DashboardHeader />
            <PetsDashboard />
+      
+         </Route>
+         <Route path="/delete">
+           
+           <Delete />
+      
+         </Route>
+         <Route path="/post">
+           
+           <Post />
       
          </Route>
         </Switch>
