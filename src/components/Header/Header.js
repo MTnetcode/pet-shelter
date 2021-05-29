@@ -1,10 +1,14 @@
 import React from "react";
+import SimpleMenu from "../burger-menu/SimpleMenu.js"
 import { NavLink, Link } from "react-router-dom";
+
 import "./header.css";
 function Header({ image, title, mgTop, love }) {
   let headerImage = {
     backgroundImage: image,
   };
+
+  
   return (
     <header className="header" style={headerImage}>
       <div className="navbar">
