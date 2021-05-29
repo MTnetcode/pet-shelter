@@ -37,3 +37,6 @@ width: 99.5%;
   font-size: 3rem;
   margin: 0 13%;
   }
+  .active-link {
+    border-bottom: 0.2rem solid #f4bb75;
+  }
