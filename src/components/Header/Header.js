@@ -9,7 +9,6 @@ function Header({ image, title, mgTop, love }) {
     <header className="header" style={headerImage}>
       <div className="navbar">
         <Link to="/">
-          {" "}
           <div className="dogatas">Dogatas</div>
         </Link>
 

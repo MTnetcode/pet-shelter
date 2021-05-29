@@ -2,6 +2,7 @@
   height: 95vh;
   background-size: cover;
   padding: 0.3rem;
+
 }
 .navbar {
   border: 0.2rem solid white;
@@ -15,8 +16,9 @@
   font-size: 3rem;
   display: inline-block;
 }
+
 li {
-  display: inline-block;
+  display: inline;
   list-style: none;
   margin: 1rem;
 }
