@@ -1,24 +1,32 @@
 import React, { useState, useEffect } from "react";
 import PetsBox from "./PetsBox.js";
 import "./pets.css";
-import { petsList as pets } from "../../pets.js";
+import fetchPets from "./fetchPets.js";
 
 function Pets({ category }) {
-  const [getAnimals, setAnimals] = useState([]);
+  const [getPets, setPets] = useState([]);
 
   useEffect(() => {
-    function getList(pets) {
-      return pets.filter((pet) => pet.category === category);
+    async function returnPets() {
+      const pets = await fetchPets(category);
+      setPets(pets);
     }
-    setAnimals(getList(pets));
+    returnPets();
   }, [category]);
 
   return (
     <div className="pets">
-      {getAnimals.map((pet) => (
-        <PetsBox img={pet.img} name={pet.name} text={pet.text} />
-      ))}
-
+      {getPets
+        ? getPets.map((pet) => (
+            <PetsBox
+              key={pet._id}
+              id={pet._id}
+              img={pet.img}
+              name={pet.name}
+              text={pet.text}
+            />
+          ))
+        : "getting pets from server"}
     </div>
   );
 }
