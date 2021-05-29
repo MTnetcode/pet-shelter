@@ -44,5 +44,47 @@ strong{
     color: black;
 }
 
+@media only screen and (max-width:767px) {
+    .info-box{
+        
+            display: block;
+            padding: .5rem;
+            flex-direction: column;
+            width: 40vh;
+            margin: 0 auto;
+            position: relative;
+    }
+    .fa-times{
+     position: absolute;
+     right: 1rem;
+    }
     
- 
+    .info-box div{
+          flex-basis: 100%;
+    }
+    .name{
+        font-size: 2rem;
+        font-weight: 600;
+      margin: 1rem 1rem;
+    }
+    .p{
+        font-size: .8rem;
+        margin: 1rem 1rem;
+    }
+    .i1{
+       height: 12.5vh;
+       display: inline-block; 
+    }
+    .i2{
+        height: 12.5vh;
+        display: inline-block; 
+     }
+     .i3{
+        height: 12.5vh;
+    
+        display: inline-block; 
+     }
+
+
+    
+}

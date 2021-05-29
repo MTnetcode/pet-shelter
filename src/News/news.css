@@ -32,3 +32,37 @@ font-weight: 600;
     flex-basis: 35%;
     border-radius: .5rem;
 }
+
+
+
+@media only screen and (max-width:768px) {
+    .news{
+        text-align: center;
+        margin: 0rem;
+    }
+    .news-flex{
+        margin: 1rem;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+
+    }
+    .news-flex >div{
+        margin: 1rem;
+    }
+
+    .news-paragraph{
+        font-weight: 300;
+        color: white;
+     
+        font-size: .8rem;
+        margin-top: .5rem;
+        padding-right: 5rem;
+    }
+    .box{
+        background-color: #9D6934;
+        padding: 1.5rem;
+        border-radius: .5rem;
+      
+    }    
+  }

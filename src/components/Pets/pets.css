@@ -1,10 +1,10 @@
 .pets{
-margin: 3rem;
+
 display: flex;
 flex-wrap: wrap;
 flex-direction: row;
 justify-content: center;
-gap: 3rem;
+gap: 2rem;
 
 }
 .pets div{
@@ -13,9 +13,8 @@ gap: 3rem;
 .pet-flex{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #EFEEF1;
-
 
    
 }
@@ -25,22 +24,69 @@ gap: 3rem;
 }
 
 .img{
-    height: 15rem;
+    height: 30vh;
 }
 .info{
     margin-top: 1rem;
+    padding: .5rem;
 }
 
 .name{
     font-size: 3rem;
     font-weight: 600;
+ 
   
 }
 .pet-paragraph{
     font-size: .8rem;
     font-weight: 300;
     
+    
 }
 em{
     font-weight: 800;
 }
+
+@media only screen and (max-width:767px) {
+    .pets{
+        margin: 0 1rem !important;
+     
+        flex-direction: column;
+        display: block !important;
+
+        
+
+        }
+        .pets div{
+            flex-basis: 100%;
+          
+        }
+        .pet-flex{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 1rem;
+           
+        }
+        .img{
+           
+           
+        }
+        
+        .pet-flex div{
+            flex-basis: 100% !important;
+        }
+        
+  
+        .info{
+       
+            padding: 1rem;
+           
+           
+          
+        }
+        
+    
+    
+  }

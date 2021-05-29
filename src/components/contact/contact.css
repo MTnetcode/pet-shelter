@@ -24,3 +24,34 @@ text-align: center;
     text-align: justify;
     margin: 2rem;
 }
+
+@media only screen and (max-width:767px) {
+
+    .contact{
+        background-color: #EFEEF1;
+        margin: 1.5rem auto;
+        padding: 1rem;
+        width: 90%;
+        
+    }
+    .c-heading{
+    text-align: center;
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    .c-paragraph{
+        font-size: .9rem;
+        text-align: justify;
+        margin: 1rem;
+        
+    }
+    .bank{
+        font-size: .6rem;
+        font-weight: 300;
+        text-align: justify;
+        margin: 1rem;
+    }
+    
+    
+  }

@@ -1,9 +1,11 @@
 .header {
-  max-height: 95vh;
+  height: 95vh;
   background-size: cover;
+
   padding: 0.3rem;
 
 }
+
 .navbar {
   border: 0.2rem solid white;
   border-radius: 0.5rem;
@@ -54,7 +56,16 @@ a {
 .active-link {
   border-bottom: 0.2rem solid #f4bb75;
 }
+
+
+
  @media only screen and (max-width:768px) {
+   .header{
+     height: 35vh;
+     background-size: cover;
+   }
+
+
   .dogatas {
     font-size: 1rem;
   }
@@ -67,18 +78,12 @@ a {
     font-size: .8rem;
   }
   .main-header {
-    font-weight: 800;
-    font-size: 10rem;
-    color: white;
-    border-bottom: 0.3rem solid #f4bb75;
-    display: inline-block;
-    margin-left: 2rem;
+    font-size: 4rem;
+    margin-top: 0 !important;
   }
   .sub-header {
-    font-weight: 400;
-    color: white;
-    font-size: 2rem;
-    margin: 1rem 2rem;
+    font-size: 1rem;
+
   }
    
  }

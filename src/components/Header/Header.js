@@ -1,7 +1,5 @@
 import React from "react";
-import SimpleMenu from "../burger-menu/SimpleMenu.js"
 import { NavLink, Link } from "react-router-dom";
-
 import "./header.css";
 function Header({ image, title, mgTop, love }) {
   let headerImage = {
@@ -11,7 +9,10 @@ function Header({ image, title, mgTop, love }) {
   
   return (
     <header className="header" style={headerImage}>
+              
       <div className="navbar">
+
+       
         <Link to="/">
           <div className="dogatas">Dogatas</div>
         </Link>
