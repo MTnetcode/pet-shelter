@@ -7,12 +7,12 @@ function DashboardHeader() {
         <h1 className="h1-dashboard">Dashboard</h1>
         <div className="links-dashboard">
         <ul>
-            <li>
+            <li className="li-pets">
                 Dogs
               
             </li>
-            <li>News</li>
-            <li>Cats</li>
+            <li className="li-pets">News</li>
+            <li className="li-pets">Cats</li>
             </ul>
         </div>
     </div>

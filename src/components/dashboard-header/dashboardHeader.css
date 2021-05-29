@@ -28,12 +28,12 @@ top: 87%;
 width: 99.5%;
 
 }
-li {
+.li-pets {
     display: inline-block;
     list-style: none;
 
     font-weight: 400;
   color: white;
   font-size: 3rem;
-  /* margin: 0 13%; */
+  margin: 0 13%;
   }
