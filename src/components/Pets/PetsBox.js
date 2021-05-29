@@ -1,6 +1,6 @@
 import React from "react";
 import "./pets.css";
-function PetsBox({ img, name, text }) {
+function PetsBox({ id, img, name, text }) {
   return (
     <div className="pet-flex">
       <div className="img-div">

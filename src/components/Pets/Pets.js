@@ -20,6 +20,7 @@ function Pets({ category }) {
         ? getPets.map((pet) => (
             <PetsBox
               key={pet._id}
+              id={pet._id}
               img={pet.img}
               name={pet.name}
               text={pet.text}
