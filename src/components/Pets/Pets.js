@@ -5,6 +5,7 @@ import fetchPets from "./fetchPets.js";
 
 function Pets({ category }) {
   const [getPets, setPets] = useState([]);
+
   async function returnPets() {
     const pets = await fetchPets(category);
     setPets(pets);
@@ -15,15 +16,16 @@ function Pets({ category }) {
 
   return (
     <div className="pets">
-      {getPets &&
-        getPets.map((pet) => (
-          <PetsBox
-            key={pet._id}
-            img={pet.img}
-            name={pet.name}
-            text={pet.text}
-          />
-        ))}
+      {getPets
+        ? getPets.map((pet) => (
+            <PetsBox
+              key={pet._id}
+              img={pet.img}
+              name={pet.name}
+              text={pet.text}
+            />
+          ))
+        : "getting pets from server"}
     </div>
   );
 }
