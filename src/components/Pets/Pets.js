@@ -4,15 +4,26 @@ import "./pets.css";
 import fetchPets from "./fetchPets.js";
 
 function Pets({ category }) {
-  const [getAnimals, setAnimals] = useState([]);
-
-  useEffect(() => {}, [category]);
+  const [getPets, setPets] = useState([]);
+  async function returnPets() {
+    const pets = await fetchPets(category);
+    setPets(pets);
+  }
+  useEffect(() => {
+    returnPets();
+  }, [category]);
 
   return (
     <div className="pets">
-      {getAnimals.map((pet) => (
-        <PetsBox img={pet.img} name={pet.name} text={pet.text} />
-      ))}
+      {getPets &&
+        getPets.map((pet) => (
+          <PetsBox
+            key={pet._id}
+            img={pet.img}
+            name={pet.name}
+            text={pet.text}
+          />
+        ))}
     </div>
   );
 }
