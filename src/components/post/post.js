@@ -7,12 +7,20 @@ function Post() {
       <i class="fas fa-times fa-2x"></i>
       <h1 className="h1-post"> New post</h1>
       <div className="post-form">
-    <div className="upload">
-        <span class="material-icons-outlined">upload</span>
-        <p className="p-upload">
+
+ <div className="upload">
+      <label for="file-upload" class="custom-file-upload">
+      <span class="material-icons-outlined">upload</span>      <p className="p-upload">
           Upload photo
         </p>
-      </div>
+</label>
+<input id="file-upload" type="file"/>
+  </div>       
+   
+       
+   
+     
+      <input type="text" placeholder="Title" className="title" />
       <textarea
         className="post-area"
         name=""
