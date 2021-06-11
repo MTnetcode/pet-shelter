@@ -5,7 +5,8 @@ function DashboardHeader() {
   return (
     <div className="dashboard">
         <p3 className="logout">Log out</p3>
-        <h1 className="h1-dashboard">Dashboard</h1>
+        <div className="container">
+          <h1 className="h1-dashboard">Dashboard</h1>
         <div className="links-dashboard">
         <ul>
             <li className="li-pets">
@@ -25,6 +26,8 @@ function DashboardHeader() {
               </li>
             </ul>
         </div>
+        </div>
+        
     </div>
   );
 }

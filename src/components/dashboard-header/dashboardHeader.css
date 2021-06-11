@@ -1,6 +1,7 @@
 .dashboard{
     background-image: url(./dasboard.svg);
-    height: 70vh;
+    height: 5%;
+    width: 100%;
     background-size: cover;
     padding: 0.3rem;
     position: relative;
@@ -11,21 +12,24 @@ right: 1rem;
 font-size: .8rem;
 color: white;
 }
+
+.container{
+  display: grid;
+  grid-template-rows: auto auto;
+  padding-bottom: 1%;
+}
 .h1-dashboard{
-position: absolute;
-font-size: 8rem;
-top: 30%;
-left: 30%;
-transform: translate(-50% -50%);
+margin-top: 20vh;
+font-size: 8vw;
+text-align: center;
 color: white;
 }
 .links-dashboard{
     border: 0.2rem solid white;
     border-radius: 0.5rem;
 padding:.5rem ;
-position: absolute;
-top: 87%;
-width: 99.5%;
+margin-top: 7%;
+width: 99.5vw;
 
 }
 .li-pets {
@@ -34,9 +38,24 @@ width: 99.5%;
 
     font-weight: 400;
   color: white;
-  font-size: 3rem;
-  margin: 0 13%;
+  font-size: 3vw;
+  margin: 0 11vw;
   }
   .active-link {
     border-bottom: 0.2rem solid #f4bb75;
+  }
+
+
+  @media only screen and (max-width:768px) {
+
+    .li-pets {
+     
+    margin: 0 0vw;
+    }
+    .h1-dashboard{
+      margin-top: 10vh;
+      font-size: 5vw;
+      text-align: center;
+      color: white;
+      }
   }
