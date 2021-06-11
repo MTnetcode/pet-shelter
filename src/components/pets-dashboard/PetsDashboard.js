@@ -1,19 +1,19 @@
 import React from "react";
 import "./petsDashboard.css";
-import PetsBoxDashboard from "./PetsBoxDashboard.js"
-function PetsDashboard() {
+import PetsBoxDashboard from "./PetsBoxDashboard.js";
+import Post from "../post/post";
+function PetsDashboard({ category }) {
   return (
     <div>
-            <div className="plus">
-            <i class="fas fa-plus"></i>
+      <div className="plus">
+        <i class="fas fa-plus"></i>
       </div>
+      <Post category={category} />
       <div className="pets">
-
-      <PetsBoxDashboard />
-      <PetsBoxDashboard />
+        <PetsBoxDashboard />
+        <PetsBoxDashboard />
+      </div>
     </div>
-    </div>
-
   );
 }
 
