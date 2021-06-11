@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
-import News from "./News/News.js";
-import Footer from "./Footer/footer.js";
+import News from "./components/News/News.js";
+import Footer from "./components/Footer/footer.js";
 import Pets from "./components/Pets/Pets.js"
 import AboutUs from "./components/about-us/AboutUs.js"
 import Contact from "./components/contact/contact.js"

@@ -1,6 +1,6 @@
 .dashboard{
     background-image: url(./dasboard.svg);
-    height: 5%;
+    
     width: 100%;
     background-size: cover;
     padding: 0.3rem;
@@ -47,15 +47,24 @@ width: 99.5vw;
 
 
   @media only screen and (max-width:768px) {
-
-    .li-pets {
-     
-    margin: 0 0vw;
-    }
+    .links-dashboard{
+display: none;
+  
+  }
     .h1-dashboard{
       margin-top: 10vh;
       font-size: 5vw;
       text-align: center;
       color: white;
       }
-  }
+   .dashboard{
+    background-image: url(./dasboard.svg);
+
+    width: 100%;
+    height: 20vh;
+    background-size: cover;
+    padding: 0.3rem;
+    position: relative;
+} 
+}
+

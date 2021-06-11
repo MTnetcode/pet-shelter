@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 80vh;
   background-size: cover;
 
   padding: 0.3rem;
@@ -65,25 +65,19 @@ a {
      background-size: cover;
    }
 
-
-  .dogatas {
-    font-size: 1rem;
-  }
-  li {
-    margin: .3rem;
-  }
-  .links {
-    right: 1rem;
-    top: 1.2rem;
-    font-size: .8rem;
-  }
   .main-header {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-top: 0 !important;
+    display: inline-block;
+
   }
   .sub-header {
     font-size: 1rem;
 
+  }
+
+  .navbar{
+    display: none;
   }
    
  }

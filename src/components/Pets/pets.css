@@ -11,9 +11,8 @@ gap: 2rem;
     flex-basis: 45%;
 }
 .pet-flex{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: auto auto;
     background-color: #EFEEF1;
 
    

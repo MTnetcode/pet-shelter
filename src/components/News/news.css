@@ -6,11 +6,9 @@
     margin: 1.5rem;
 }
 .news-flex{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-    gap: 1rem 3rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem 1rem;
 }
 .news-header{
 color: white;
