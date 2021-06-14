@@ -5,6 +5,7 @@ import Post from "../post/post";
 import fetchPets from "../../services/fetchPets";
 
 function PetsDashboard({ category }) {
+  const [addNew, setAddNew] = useState(false);
   const [getPets, setPets] = useState([]);
   useEffect(() => {
     async function returnPets() {
@@ -13,12 +14,15 @@ function PetsDashboard({ category }) {
     }
     returnPets();
   }, [category]);
+  const handleClick = (e) => {
+    setAddNew(!addNew);
+  };
   return (
-    <div>
+    <div onClick={handleClick}>
       <div className="plus">
         <i class="fas fa-plus"></i>
       </div>
-      <Post category={category} />
+      {addNew && <Post category={category} handleClick={handleClick} />}
       <div className="pets">
         {getPets.length > 0
           ? getPets.map((pet) => (

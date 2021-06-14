@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./post.css";
 import sendData from "../../services/sendData";
 
-function Post({ category }) {
+function Post({ category, handleClick }) {
   const [formData, setFormData] = useState({
     name: "",
     text: "",
@@ -35,7 +35,7 @@ function Post({ category }) {
   };
   return (
     <div className="post">
-      <i class="fas fa-times fa-2x"></i>
+      <i class="fas fa-times fa-2x" onClick={handleClick}></i>
       <h1 className="h1-post"> New post</h1>
       <form name="form">
         <div className="post-form">
