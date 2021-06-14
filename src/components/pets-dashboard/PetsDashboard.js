@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./petsDashboard.css";
 import PetsBoxDashboard from "./PetsBoxDashboard.js";
 import Post from "../post/post";
-import fetchPets from "../Pets/fetchPets";
+import fetchPets from "../../services/fetchPets";
 
 function PetsDashboard({ category }) {
   const [getPets, setPets] = useState([]);

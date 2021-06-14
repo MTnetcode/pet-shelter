@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./post.css";
-import sendData from "./sendData";
+import sendData from "../../services/sendData";
 
 function Post({ category }) {
   const [formData, setFormData] = useState({
