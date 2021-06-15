@@ -1,8 +1,9 @@
 const SERVER = "http://petshelter-api.mtnetcode.com";
 
 export default async function login(data) {
-  let res = await fetch(`http://localhost:5555/api/auth/login`, {
+  let res = await fetch(`${SERVER}/api/auth/login`, {
     method: "POST",
+
     body: data,
   });
   let msg = await res.json();
