@@ -18,8 +18,8 @@ function PetsDashboard({ category }) {
     setAddNew(!addNew);
   };
   return (
-    <div onClick={handleClick}>
-      <div className="plus">
+    <div>
+      <div className="plus" onClick={handleClick}>
         <i class="fas fa-plus"></i>
       </div>
       {addNew && <Post category={category} handleClick={handleClick} />}

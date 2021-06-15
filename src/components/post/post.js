@@ -27,11 +27,9 @@ function Post({ category, handleClick }) {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(e.target.form);
     let newForm = new FormData(e.target.form);
     newForm.append("category", category);
     let response = await sendData(newForm);
-    console.log(response);
   };
   return (
     <div className="post">
