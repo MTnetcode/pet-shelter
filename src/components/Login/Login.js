@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import login from "../../services/login";
+import { Redirect } from "react-router-dom";
 import "./login.css";
 function Login() {
   const [getCredentials, setCredentials] = useState({
@@ -13,9 +14,8 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let newForm = new FormData(e.target.form);
-    console.log(e.target.form);
-    let test = await login(newForm);
-    console.log(test);
+    let auth = await login(newForm);
+    console.log(auth);
   };
   return (
     <div className="login">
