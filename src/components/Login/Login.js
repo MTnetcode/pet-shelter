@@ -7,6 +7,7 @@ function Login() {
     username: "",
     password: "",
   });
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCredentials({ ...getCredentials, [name]: value });
@@ -15,7 +16,7 @@ function Login() {
     e.preventDefault();
     let newForm = new FormData(e.target.form);
     let auth = await login(newForm);
-    console.log(auth);
+    setIsAuthenticated(auth);
   };
   return (
     <div className="login">
@@ -46,6 +47,7 @@ function Login() {
           />
         </form>
       </div>
+      {isAuthenticated && <Redirect to="/dashboard-news" />}
     </div>
   );
 }
