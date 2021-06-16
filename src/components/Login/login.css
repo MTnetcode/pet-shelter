@@ -46,3 +46,86 @@
     background-color: white;
     color: black;
 }
+@media only screen and (max-width:768px) {
+
+    .login{
+        background-image: url(./login-ipad.png);
+        height: 100vh;
+      width: 100vw;
+
+  
+        
+     }
+     .form{
+         
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        transform: translate(-50% -50%);
+        width: 80%;
+        height: 1rem;
+      
+       
+    }
+    
+
+
+  }
+
+
+  
+@media only screen and (max-width:767px) {
+
+    .login{
+        background-image: url(./login-mobile.png);
+        height: 100vh;
+     
+        background-repeat: no-repeat;
+
+  
+        
+     }
+     .form{
+         
+         position: absolute;
+         top: 10%;
+         left: 10%;
+         transform: translate(-50% -50%);
+         width: 80%;
+       
+        
+     }
+     .login-header{
+     
+         font-size: 2rem;
+         font-weight: 600;
+         text-align: center;
+         color: white;
+     }
+     .login-inp{
+     
+         display: block;
+         background-color: hsla(0, 0%, 100%, 0.514);
+         color: #9A8C8C;
+         padding: 1rem;
+         width: 100%;
+         border: none;
+         margin: 1rem 0;
+     
+     }
+     .login-btn{
+         margin: 0 auto;
+         
+         background-color: rgba(255, 255, 255, 0);
+         border: white solid .2rem;
+         color: white;
+         padding: .4rem;
+         width: 100%;
+         height: auto;
+     }
+     .login-btn:hover{
+         background-color: white;
+         color: black;
+     }
+    
+  }

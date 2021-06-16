@@ -6,7 +6,7 @@
     text-align: center;
 }
 .h1-delete{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
 }
@@ -18,3 +18,25 @@
     margin: 1.5rem .5rem;
 
 }
+.btn-delete:hover{
+    background-color: #9D6934;
+    color: white;
+}
+
+@media only screen and (max-width:768px) {
+    .delete{
+        width: 99%;
+    }
+    .h1-delete{
+        font-size: .9rem;
+ 
+    }
+    .btn-delete{
+
+        font-size: .5rem;
+
+    
+    }
+  
+    
+  }
