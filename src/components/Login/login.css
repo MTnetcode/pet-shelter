@@ -41,10 +41,15 @@
 }
 
 .wait {
-  display: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 30%;
   padding: 5rem;
+  background-color: rgba(246, 248, 241, 0.952);
+  text-align: center;
+}
+.wait h2 {
+  margin-bottom: 2rem;
 }

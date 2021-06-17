@@ -4,7 +4,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 const LoginWait = () => {
   return (
     <div className="wait">
-      Logging in progress please wait <CircularProgress />
+      <h2>Login in progress please wait</h2> <CircularProgress />
     </div>
   );
 };
