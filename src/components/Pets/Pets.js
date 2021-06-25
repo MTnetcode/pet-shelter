@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PetsBox from "./PetsBox.js";
 import "./pets.css";
-import fetchPets from "./fetchPets.js";
+import fetchPets from "../../services/fetchPets";
 
 function Pets({ category }) {
   const [getPets, setPets] = useState([]);
