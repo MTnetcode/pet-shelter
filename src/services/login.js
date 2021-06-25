@@ -1,5 +1,5 @@
 import Cookies from "universal-cookie";
-const SERVER = "http://petshelter-api.mtnetcode.com";
+import { SERVER } from "./serverConst";
 
 export default async function login(data) {
   let res = await fetch(`${SERVER}/api/auth/login`, {

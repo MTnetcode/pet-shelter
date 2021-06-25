@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import login from "../../services/login";
+import verifyLogin from "../../services/verifyLogin";
 import LoginWait from "./LoginWait";
-import Cookies from "universal-cookie";
+
 import { Redirect } from "react-router-dom";
 import "./login.css";
 import { useEffect } from "react";
 function Login() {
-  const cookies = new Cookies();
   const [getCredentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -26,7 +26,11 @@ function Login() {
     setIsAuthenticated(auth);
   };
   useEffect(() => {
-    cookies.get("token") && setIsAuthenticated(true);
+    async function loginVerifyService() {
+      const res = await verifyLogin();
+      setIsAuthenticated(res);
+    }
+    loginVerifyService();
   }, []);
   return (
     <div className="login">
