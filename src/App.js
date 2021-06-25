@@ -28,13 +28,13 @@ function App() {
             <Footer />
           </Route>
           <Route path="/about-us">
-            <Header image='url("/images/about-us.svg")' title="About us" />
+            <Header image='url("/images/about.jpg")' title="About us" />
             <AboutUs />
             <Footer />
           </Route>
           <Route path="/dogs">
             <Header
-              image='url("/images/dogs.svg")'
+              image='url("/images/dog.jpg")'
               title="Dogs"
               mgTop="10rem"
             />
@@ -43,7 +43,7 @@ function App() {
           </Route>
           <Route path="/cats">
             <Header
-              image='url("/images/cats.svg")'
+              image='url("/images/cat.jpg")'
               title="Cats"
               mgTop="10rem"
             />
@@ -52,7 +52,7 @@ function App() {
           </Route>
           <Route path="/contact">
             <Header
-              image='url("/images/contact.svg")'
+              image='url("/images/contact.png")'
               title="Contact"
               mgTop="10rem"
             />

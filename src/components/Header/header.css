@@ -1,9 +1,8 @@
 .header {
-  height: 80vh;
+  height: 100vh;
   background-size: cover;
-
+  background-position: center;
   padding: 0.3rem;
-
 }
 
 .navbar {
@@ -57,27 +56,22 @@ a {
   border-bottom: 0.2rem solid #f4bb75;
 }
 
-
-
- @media only screen and (max-width:768px) {
-   .header{
-     height: 35vh;
-     background-size: cover;
-   }
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 35vh;
+    background-size: cover;
+  }
 
   .main-header {
     font-size: 3.5rem;
     margin-top: 0 !important;
     display: inline-block;
-
   }
   .sub-header {
     font-size: 1rem;
-
   }
 
-  .navbar{
+  .navbar {
     display: none;
   }
-   
- }
+}

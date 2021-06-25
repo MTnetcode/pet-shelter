@@ -39,7 +39,7 @@ function Post({ category, handleClick }) {
         <div className="post-form">
           <div className="upload">
             <label for="file-upload" class="custom-file-upload">
-              <span class="material-icons-outlined">upload</span>{" "}
+              <span class="material-icons-outlined m-upload">upload</span>{" "}
               <p className="p-upload">Upload photo</p>
             </label>
             <input

@@ -4,8 +4,13 @@
     background-color: #EFEEF1;
     width: 5rem;
     height: 5rem;
+    transition: all .3s;
 
 }
+.plus:hover{
+transform: scale(1.3);
+}
+
 .fa-plus{
 
     font-size: 3rem;
@@ -16,12 +21,28 @@
 
 .fachange{
 margin: .5rem;
+transition: all .3s;
 }
+
+.fachange:hover{
+transform: scale(1.3);
+}
+.fatrash{
+    transition: all .3s;
+
+}
+.fatrash:hover{
+transform: scale(1.3);
+}
+
+
+
 .change{
     position: absolute;
     right: 2rem;
-
 }
+
+
 .news-box{
     background-color: #EFEEF1;
     margin: 2rem auto;
