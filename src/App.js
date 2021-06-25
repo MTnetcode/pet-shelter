@@ -20,7 +20,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Header
-              image='url("/images/header-photo.svg")'
+              image='url("/images/header-img.png")'
               title="SAVE ME"
               love="and find love of your life"
             />
