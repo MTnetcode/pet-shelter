@@ -1,4 +1,4 @@
-const SERVER = "http://petshelter-api.mtnetcode.com";
+import { SERVER } from "./serverConst";
 
 /**
  * function to fetch pets from server

@@ -28,7 +28,6 @@ function Login() {
   useEffect(() => {
     async function loginVerifyService() {
       const res = await verifyLogin();
-      console.log(res);
       setIsAuthenticated(res);
     }
     loginVerifyService();

@@ -1,13 +1,13 @@
-import Cookies from "universal-cookie";
-const SERVER = "http://petshelter-api.mtnetcode.com";
-const cookie = new Cookies();
+import getToken from "./getToken";
+import { SERVER } from "./serverConst";
+
 /**
  * function which saves new pet to db
  * @param {HTMLFormElement} data - form data to save
  * @returns JSON with message from server
  */
 export default async function sendData(data) {
-  const token = cookie.get("token");
+  const token = getToken();
   if (token) {
     const headers = new Headers();
     headers.append("Content-Type", "application/json");
