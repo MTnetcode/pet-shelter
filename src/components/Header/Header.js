@@ -5,6 +5,7 @@ import "./header.css";
 function Header({ image, title, mgTop, love }) {
   let headerImage = {
     backgroundImage: image,
+  
   };
 
   

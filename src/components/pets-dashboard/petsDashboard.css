@@ -5,8 +5,11 @@
         background-color: #EFEEF1;
         width: 5rem;
         height: 5rem;
-    
-    }
+    transition: all .3s;
+}
+.plus:hover{
+transform: scale(1.3);
+}
     .pets{
     margin: 3rem;
 display: grid;
@@ -21,9 +24,15 @@ grid-template-columns: auto auto;
     
         font-size: 3rem;
         margin: 1rem 1.2rem;
-        
     
-    }
+
+}
+.fachange{
+    transition: all .3s;
+}
+.fachange:hover{
+transform: scale(1.3);
+}
 
     .pets div{
         flex-basis: 45%;
