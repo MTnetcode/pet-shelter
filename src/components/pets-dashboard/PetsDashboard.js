@@ -3,6 +3,7 @@ import "./petsDashboard.css";
 import PetsBoxDashboard from "./PetsBoxDashboard.js";
 import Post from "../post/post";
 import fetchPets from "../../services/fetchPets";
+import deletePost from "../../services/deletePost";
 
 function PetsDashboard({ category }) {
   const [addNew, setAddNew] = useState(false);
@@ -17,6 +18,10 @@ function PetsDashboard({ category }) {
   const handleClick = (e) => {
     setAddNew(!addNew);
   };
+  function deletePet(id) {
+    setPets(getPets.filter((pet) => pet._id !== id));
+    deletePost(id);
+  }
   return (
     <div>
       <div className="plus" onClick={handleClick}>
@@ -32,6 +37,7 @@ function PetsDashboard({ category }) {
                 img={pet.img}
                 name={pet.name}
                 text={pet.text}
+                deletePet={deletePet}
               />
             ))
           : "getting pets from server"}

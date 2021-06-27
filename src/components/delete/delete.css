@@ -1,42 +1,39 @@
-.delete{
-    background-color: #EFEEF1;
-    width: 40%;
-    margin: 0 auto;
-    padding: 2rem;
-    text-align: center;
+.delete {
+  background-color: #efeef1;
+  width: 40%;
+  margin: 0 auto;
+  padding: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.h1-delete{
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: center;
+.h1-delete {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
 }
-.btn-delete{
-    border: solid .15rem #9D6934 ;
-    color: #9D6934;
-    padding: .3rem 2rem;
-    font-size: 1rem;
-    margin: 1.5rem .5rem;
-
+.btn-delete {
+  border: solid 0.15rem #9d6934;
+  color: #9d6934;
+  padding: 0.3rem 2rem;
+  font-size: 1rem;
+  margin: 1.5rem 0.5rem;
 }
-.btn-delete:hover{
-    background-color: #9D6934;
-    color: white;
+.btn-delete:hover {
+  background-color: #9d6934;
+  color: white;
 }
 
-@media only screen and (max-width:768px) {
-    .delete{
-        width: 99%;
-    }
-    .h1-delete{
-        font-size: .9rem;
- 
-    }
-    .btn-delete{
-
-        font-size: .5rem;
-
-    
-    }
-  
-    
+@media only screen and (max-width: 768px) {
+  .delete {
+    width: 99%;
   }
+  .h1-delete {
+    font-size: 0.9rem;
+  }
+  .btn-delete {
+    font-size: 0.5rem;
+  }
+}
