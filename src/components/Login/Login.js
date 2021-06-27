@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import login from "../../services/login";
 import verifyLogin from "../../services/verifyLogin";
 import Wait from "../reusable/Wait";
-import { Redirect } from "react-router-dom";
+import { Redirect, useLocation } from "react-router-dom";
 import "./login.css";
+import Warning from "./Warning";
 import { useEffect } from "react";
 function Login(props) {
-  console.log(props);
-
+  let location = useLocation();
   const [getCredentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -36,6 +36,7 @@ function Login(props) {
   return (
     <div className="login">
       <div className="form">
+        {location.state?.msg && <Warning text={location.state.msg} />}
         <h1 className="login-header">Log in form</h1>
         <form name="form">
           <input

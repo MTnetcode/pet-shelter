@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./post.css";
 import sendData from "../../services/sendData";
 
-function Post({ category, handleClick, setAddNew }) {
+function Post({ category, handleClick, setAddNew, addImg, where }) {
   const [formData, setFormData] = useState({
     name: "",
     text: "",
@@ -19,7 +19,7 @@ function Post({ category, handleClick, setAddNew }) {
         [name]: value,
       });
     }
-    if (formData.name && formData.text && formData.img) {
+    if (formData.name && formData.text) {
       setDisabled(false);
     } else {
       setDisabled(true);
@@ -28,8 +28,8 @@ function Post({ category, handleClick, setAddNew }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let newForm = new FormData(e.target.form);
-    newForm.append("category", category);
-    await sendData(newForm);
+    where === "pets" && newForm.append("category", category);
+    await sendData(newForm, where);
     setAddNew(false);
   };
   return (
@@ -38,18 +38,22 @@ function Post({ category, handleClick, setAddNew }) {
       <h1 className="h1-post"> New post</h1>
       <form name="form">
         <div className="post-form">
-          <div className="upload">
-            <label for="file-upload" class="custom-file-upload">
-              <span class="material-icons-outlined m-upload">upload</span>{" "}
-              <p className="p-upload">Upload photo</p>
-            </label>
-            <input
-              id="file-upload"
-              type="file"
-              name="img"
-              onChange={handleChange}
-            />
-          </div>
+          {addImg && (
+            <div className="upload">
+              <label for="file-upload" class="custom-file-upload">
+                <span class="material-icons-outlined m-upload">upload</span>{" "}
+                <p className="p-upload">Upload photo</p>
+              </label>
+
+              <input
+                id="file-upload"
+                type="file"
+                name="img"
+                onChange={handleChange}
+              />
+            </div>
+          )}
+
           {formData.img && `image ${formData.img.name} uploaded`}
           <input
             type="text"

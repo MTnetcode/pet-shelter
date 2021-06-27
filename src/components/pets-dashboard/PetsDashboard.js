@@ -13,6 +13,7 @@ function PetsDashboard({ category }) {
   const [isLoggedIn, setIsLoggedIn] = useState(loginVerifyService());
   const [getPets, setPets] = useState([]);
   const [msg] = useState("You have to log in first");
+
   useEffect(() => {
     async function returnPets() {
       const pets = await fetchPets(category);
@@ -27,7 +28,7 @@ function PetsDashboard({ category }) {
 
   function deletePet(id) {
     setPets(getPets.filter((pet) => pet._id !== id));
-    deletePost(id);
+    deletePost(id, "pets");
   }
 
   async function loginVerifyService() {
@@ -44,6 +45,8 @@ function PetsDashboard({ category }) {
           category={category}
           handleClick={handleClick}
           setAddNew={setAddNew}
+          addImg={true}
+          where="pets"
         />
       )}
       <div className="pets">
@@ -55,7 +58,7 @@ function PetsDashboard({ category }) {
               img={pet.img}
               name={pet.name}
               text={pet.text}
-              deletePet={deletePet}
+              deletePost={deletePet}
             />
           ))
         ) : (

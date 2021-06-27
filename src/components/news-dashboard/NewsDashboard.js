@@ -1,33 +1,78 @@
 import React from "react";
 import "./newsDashboard.css";
 import Post from "../post/post";
+import { useState } from "react";
+import { useEffect } from "react";
+import fetchNews from "../../services/fetchNews";
+import verifyLogin from "../../services/verifyLogin";
+import NewsBoxDashboard from "./newsBoxDashboard";
+import Wait from "../reusable/Wait";
+import { Redirect } from "react-router-dom";
+import deletePost from "../../services/deletePost";
+
 function NewsDashboard() {
+  const [getNews, setNews] = useState();
+  const [addNew, setAddNew] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(loginVerifyService());
+
+  async function returnNews() {
+    setNews(await fetchNews());
+  }
+  useEffect(() => {
+    returnNews();
+  }, [addNew]);
+
+  const handleClick = (e) => {
+    setAddNew(!addNew);
+  };
+
+  async function loginVerifyService() {
+    const res = await verifyLogin();
+    setIsLoggedIn(res);
+  }
+
+  function deleteNew(id) {
+    setNews(getNews.filter((oneNew) => oneNew._id !== id));
+    deletePost(id, "news");
+  }
+
   return (
     <div>
       <div className="plus">
-        <i class="fas fa-plus"></i>
+        <i class="fas fa-plus" onClick={handleClick}></i>
       </div>
-      <div className="news-box">
-        <div className="change">
-          <i class="fas fa-pen fa-2x fachange"></i>
-          <i class="fas fa-2x fa-trash fachange"></i>
-        </div>
-        <h1 className="name">Magna efficitur </h1>
-        <p className="p-news">
-          In at iaculis lorem. Praesent tempor dictum tellus ut molestie. Sed
-          sed ullamcorper lorem, id faucibus odio. Duis eu nisl ut ligula cursus
-          molestie at at dolor. Nulla est justo, pellentesque vel lectus eget,
-          fermentum varius dui. Morbi faucibus quam sed efficitur interdum.
-          Suspendisse in pretium magna. Vivamus nec orci purus. Quisque accumsan
-          dictum urna semper laoreet. Sed id rutrum tellus. In nisi sapien,
-          sagittis faucibus tincidunt et, lacinia id felis. Ut tempor lectus
-          porta, tempus orci ac, feugiat tellus. Suspendisse sagittis libero
-          vitae metus sodales, id semper justo congue. Donec quam lorem,
-          efficitur sit amet ex dapibus, venenatis sodales justo. Nulla arcu
-          tellus, lacinia ac feugiat ac, cursus eget felis. Pellentesque
-          fringilla quam ac ex convallis, vel imperdiet magna laoreet.
-        </p>
-      </div>
+      {addNew && (
+        <Post
+          handleClick={handleClick}
+          setAddNew={setAddNew}
+          addImg={false}
+          where="news"
+        />
+      )}
+      {getNews?.length > 0 ? (
+        getNews.map((oneNew) => {
+          console.log(oneNew);
+          return (
+            <NewsBoxDashboard
+              key={oneNew.key}
+              id={oneNew._id}
+              title={oneNew.name}
+              text={oneNew.text}
+              deletePost={deleteNew}
+            />
+          );
+        })
+      ) : (
+        <Wait msg="getting news" />
+      )}
+      {!isLoggedIn && (
+        <Redirect
+          to={{
+            pathname: "/login",
+            state: { msg: "You have to log in first" },
+          }}
+        />
+      )}
     </div>
   );
 }

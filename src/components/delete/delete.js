@@ -1,6 +1,6 @@
 import React from "react";
 import "./delete.css";
-function Delete({ deletePet, id, setOpenDelete }) {
+function Delete({ deletePost, id, setOpenDelete, where }) {
   return (
     <div className="delete">
       <h1 className="h1-delete">Are you sure you want to delete this post?</h1>
@@ -8,7 +8,7 @@ function Delete({ deletePet, id, setOpenDelete }) {
       <button
         className="btn-delete"
         onClick={() => {
-          deletePet(id);
+          deletePost(id, where);
           setOpenDelete(false);
         }}
       >

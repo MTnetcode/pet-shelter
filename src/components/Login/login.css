@@ -66,6 +66,16 @@
   background-color: white;
   color: black;
 }
+
+.warning {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.7rem 0.5rem;
+}
 @media only screen and (max-width: 768px) {
   .login {
     background-image: url(./login-ipad.png);
