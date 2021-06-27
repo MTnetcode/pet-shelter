@@ -49,7 +49,7 @@ function NewsDashboard() {
           where="news"
         />
       )}
-      {getNews?.length > 0 ? (
+      {getNews !== undefined ? (
         getNews.map((oneNew) => {
           console.log(oneNew);
           return (
