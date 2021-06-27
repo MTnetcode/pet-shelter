@@ -33,20 +33,12 @@ function App() {
             <Footer />
           </Route>
           <Route path="/dogs">
-            <Header
-              image='url("/images/dog.jpg")'
-              title="Dogs"
-              mgTop="10rem"
-            />
+            <Header image='url("/images/dog.jpg")' title="Dogs" mgTop="10rem" />
             <Pets category="dogs" />
             <Footer />
           </Route>
           <Route path="/cats">
-            <Header
-              image='url("/images/cat.jpg")'
-              title="Cats"
-              mgTop="10rem"
-            />
+            <Header image='url("/images/cat.jpg")' title="Cats" mgTop="10rem" />
             <Pets category="cats" />
             <Footer />
           </Route>

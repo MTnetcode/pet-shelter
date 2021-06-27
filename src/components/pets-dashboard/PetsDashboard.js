@@ -12,6 +12,7 @@ function PetsDashboard({ category }) {
   const [addNew, setAddNew] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(loginVerifyService());
   const [getPets, setPets] = useState([]);
+  const [msg] = useState("You have to log in first");
   useEffect(() => {
     async function returnPets() {
       const pets = await fetchPets(category);
@@ -61,7 +62,7 @@ function PetsDashboard({ category }) {
           <Wait msg="getting pets" />
         )}
       </div>
-      {!isLoggedIn && <Redirect to="/login" />}
+      {!isLoggedIn && <Redirect to={{ pathname: "/login", state: { msg } }} />}
     </div>
   );
 }

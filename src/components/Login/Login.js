@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import login from "../../services/login";
 import verifyLogin from "../../services/verifyLogin";
 import Wait from "../reusable/Wait";
-
 import { Redirect } from "react-router-dom";
 import "./login.css";
 import { useEffect } from "react";
-function Login() {
+function Login(props) {
+  console.log(props);
+
   const [getCredentials, setCredentials] = useState({
     username: "",
     password: "",
