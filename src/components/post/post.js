@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./post.css";
 import sendData from "../../services/sendData";
 
-function Post({ category, handleClick }) {
+function Post({ category, handleClick, setAddNew }) {
   const [formData, setFormData] = useState({
     name: "",
     text: "",
@@ -29,7 +29,8 @@ function Post({ category, handleClick }) {
     e.preventDefault();
     let newForm = new FormData(e.target.form);
     newForm.append("category", category);
-    let response = await sendData(newForm);
+    await sendData(newForm);
+    setAddNew(false);
   };
   return (
     <div className="post">

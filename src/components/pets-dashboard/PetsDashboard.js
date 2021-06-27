@@ -27,7 +27,13 @@ function PetsDashboard({ category }) {
       <div className="plus" onClick={handleClick}>
         <i class="fas fa-plus"></i>
       </div>
-      {addNew && <Post category={category} handleClick={handleClick} />}
+      {addNew && (
+        <Post
+          category={category}
+          handleClick={handleClick}
+          setAddNew={setAddNew}
+        />
+      )}
       <div className="pets">
         {getPets.length > 0
           ? getPets.map((pet) => (

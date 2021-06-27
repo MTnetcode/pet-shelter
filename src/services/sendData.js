@@ -10,7 +10,6 @@ export default async function sendData(data) {
   const token = getToken();
   if (token) {
     const headers = new Headers();
-    headers.append("Content-Type", "application/json");
     headers.append("Authorization", `Token ${token}`);
     const res = await fetch(`${SERVER}/api/pets`, {
       method: "POST",
