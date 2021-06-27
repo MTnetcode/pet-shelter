@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import login from "../../services/login";
 import verifyLogin from "../../services/verifyLogin";
-import LoginWait from "./LoginWait";
+import Wait from "../reusable/Wait";
 
 import { Redirect } from "react-router-dom";
 import "./login.css";
@@ -61,7 +61,7 @@ function Login() {
           />
         </form>
       </div>
-      {wait && <LoginWait />}
+      {wait && <Wait msg="Login" />}
       {isAuthenticated && <Redirect to="/dashboard-news" />}
     </div>
   );
