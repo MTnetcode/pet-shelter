@@ -14,10 +14,12 @@ function PetsDashboard({ category }) {
       setPets(pets);
     }
     returnPets();
-  }, [category]);
+  }, [category, addNew === false]);
+
   const handleClick = (e) => {
     setAddNew(!addNew);
   };
+
   function deletePet(id) {
     setPets(getPets.filter((pet) => pet._id !== id));
     deletePost(id);
