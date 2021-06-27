@@ -1,1 +1,1 @@
-export const SERVER = "http://petshelter-api.mtnetcode.com";
+export const SERVER = "https://tomdev-pet-shelter-api.herokuapp.com";
