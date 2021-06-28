@@ -23,7 +23,12 @@ function PetsBoxDashboard({ id, img, name, text, deletePet }) {
         <p className="pet-paragraph">{text}</p>
       </div>
       {openDelete && (
-        <Delete deletePet={deletePet} id={id} setOpenDelete={setOpenDelete} />
+        <Delete
+          deletePost={deletePet}
+          id={id}
+          setOpenDelete={setOpenDelete}
+          where="pets"
+        />
       )}
     </div>
   );
