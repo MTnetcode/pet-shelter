@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Delete from "../delete/delete";
 import "./petsDashboard.css";
-function PetsBoxDashboard({ id, img, name, text, deletePet }) {
+function PetsBoxDashboard({ id, img, name, text, deletePost }) {
   const [openDelete, setOpenDelete] = useState(false);
   return (
     <div className="pet-flex">
@@ -24,7 +24,7 @@ function PetsBoxDashboard({ id, img, name, text, deletePet }) {
       </div>
       {openDelete && (
         <Delete
-          deletePost={deletePet}
+          deletePost={deletePost}
           id={id}
           setOpenDelete={setOpenDelete}
           where="pets"

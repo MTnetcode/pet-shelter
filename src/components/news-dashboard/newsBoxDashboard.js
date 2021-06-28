@@ -5,13 +5,14 @@ const NewsBoxDashboard = ({ id, title, text, deletePost }) => {
   const [openDelete, setOpenDelete] = useState(false);
   return (
     <div className="box">
+      <div className="change">
       <i class="fas fa-pen fa-2x fachange"></i>
       <i
         class="fas fa-2x fa-trash fachange"
         onClick={() => {
           setOpenDelete(true);
         }}
-      ></i>
+      ></i></div>
       <h2 className="news-header">{title}</h2>
       <p className="news-paragraph">{text}</p>
       {openDelete && (
