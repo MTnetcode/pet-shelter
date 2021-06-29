@@ -1,90 +1,89 @@
-.info-box{
-    background-color: #EFEEF1;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        width: 80vh;
-        margin: 0 auto;
-        position: relative;
+.info-box {
+  background-color: #efeef1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80vh;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.fa-times{
- position: absolute;
- right: 1rem;
+.fa-times {
+  position: absolute;
+  right: 1rem;
 }
 
-.info-box div{
-      flex-basis: 45%;
+.info-box div {
+  flex-basis: 45%;
 }
-.name{
-    font-size: 3rem;
-    font-weight: 600;
+.name {
+  font-size: 3rem;
+  font-weight: 600;
   margin: 1rem 0;
 }
-.p{
-    font-size: 1rem;
-    margin: 1 0rem;
+.p {
+  font-size: 1rem;
+  margin: 1 0rem;
 }
-.i1{
-   height: 20vh;
-   display: block; 
+.i1 {
+  height: 20vh;
+  display: block;
 }
-.i2{
-    height: 20vh;
-    display: block; 
- }
- .i3{
-    height: 20vh;
-
-    display: block; 
- }
-.link{
-    color: black;
+.i2 {
+  height: 20vh;
+  display: block;
 }
-strong{
-    color: black;
+.i3 {
+  height: 20vh;
+
+  display: block;
+}
+.link {
+  color: black;
+}
+strong {
+  color: black;
 }
 
-@media only screen and (max-width:767px) {
-    .info-box{
-        
-            display: block;
-            padding: .5rem;
-            flex-direction: column;
-            width: 40vh;
-            margin: 0 auto;
-            position: relative;
-    }
-    .fa-times{
-     position: absolute;
-     right: 1rem;
-    }
-    
-    .info-box div{
-          flex-basis: 100%;
-    }
-    .name{
-        font-size: 2rem;
-        font-weight: 600;
-      margin: 1rem 1rem;
-    }
-    .p{
-        font-size: .8rem;
-        margin: 1rem 1rem;
-    }
-    .i1{
-       height: 12.5vh;
-       display: inline-block; 
-    }
-    .i2{
-        height: 12.5vh;
-        display: inline-block; 
-     }
-     .i3{
-        height: 12.5vh;
-    
-        display: inline-block; 
-     }
+@media only screen and (max-width: 767px) {
+  .info-box {
+    display: block;
+    padding: 0.5rem;
+    flex-direction: column;
+    width: 40vh;
+    margin: 0 auto;
+    position: relative;
+  }
+  .fa-times {
+    position: absolute;
+    right: 1rem;
+  }
 
+  .info-box div {
+    flex-basis: 100%;
+  }
+  .name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 1rem;
+  }
+  .p {
+    font-size: 0.8rem;
+    margin: 1rem 1rem;
+  }
+  .i1 {
+    height: 12.5vh;
+    display: inline-block;
+  }
+  .i2 {
+    height: 12.5vh;
+    display: inline-block;
+  }
+  .i3 {
+    height: 12.5vh;
 
-    
+    display: inline-block;
+  }
 }
