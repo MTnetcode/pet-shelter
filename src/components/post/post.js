@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import "./post.css";
 import sendData from "../../services/sendData";
+import Wait from "../reusable/Wait";
 
-function Post({ category, handleClick, setAddNew, addImg, where }) {
+function Post({
+  category,
+  handleClick,
+  setAddNew,
+  addImg,
+  where,
+  setErrorMsg,
+}) {
   const [formData, setFormData] = useState({
     name: "",
     text: "",
     img: "",
   });
   const [getDisabled, setDisabled] = useState(true);
+  const [showWait, setShowWait] = useState(false);
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "img") {
@@ -29,7 +38,14 @@ function Post({ category, handleClick, setAddNew, addImg, where }) {
     e.preventDefault();
     let newForm = new FormData(e.target.form);
     where === "pets" && newForm.append("category", category);
-    await sendData(newForm, where);
+    setShowWait(true);
+    const dataSent = await sendData(newForm, where);
+    if (dataSent) {
+      setShowWait(false);
+    } else {
+      setShowWait(false);
+      setErrorMsg("You post could not be created");
+    }
     setAddNew(false);
   };
   return (
@@ -82,6 +98,7 @@ function Post({ category, handleClick, setAddNew, addImg, where }) {
           ></input>
         </div>
       </form>
+      {showWait && <Wait msg="Adding post" />}
     </div>
   );
 }

@@ -13,20 +13,20 @@ export default async function sendData(data, category) {
     headers.append("Authorization", `Token ${token}`);
     switch (category) {
       case "pets": {
-        const res = await fetch(`${SERVER}/api/pets`, {
+        await fetch(`${SERVER}/api/pets`, {
           method: "POST",
           headers: headers,
           body: data,
         });
-        return res.json();
+        return true;
       }
       case "news": {
-        const res = await fetch(`${SERVER}/api/news`, {
+        await fetch(`${SERVER}/api/news`, {
           method: "POST",
           headers: headers,
           body: data,
         });
-        return res.json();
+        return true;
       }
       default: {
         return false;

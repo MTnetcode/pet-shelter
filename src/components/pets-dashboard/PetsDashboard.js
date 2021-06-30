@@ -13,6 +13,7 @@ function PetsDashboard({ category }) {
   const [isLoggedIn, setIsLoggedIn] = useState(loginVerifyService());
   const [getPets, setPets] = useState([]);
   const [msg] = useState("You have to log in first");
+  const [errorMsg, setErrorMsg] = useState("");
 
   useEffect(() => {
     async function returnPets() {
@@ -40,6 +41,7 @@ function PetsDashboard({ category }) {
       <div className="plus" onClick={handleClick}>
         <i class="fas fa-plus"></i>
       </div>
+      {errorMsg.length > 2 && errorMsg}
       {addNew && (
         <Post
           category={category}
@@ -47,6 +49,7 @@ function PetsDashboard({ category }) {
           setAddNew={setAddNew}
           addImg={true}
           where="pets"
+          setErrorMsg={setErrorMsg}
         />
       )}
       <div className="pets">
