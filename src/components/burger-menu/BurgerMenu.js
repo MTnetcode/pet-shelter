@@ -1,19 +1,16 @@
-import React, { useState } from 'react';
-import Burger from "./burger"
-import Menu from "./menu"
+import React, { useState } from "react";
+import Burger from "./burger";
+import Menu from "./menu";
 
 function BurgerMenu() {
   const [open, setOpen] = useState(false);
-    return (
-      <div>
-        <div style={{overflow: 'hidden'}}>
-        <Burger open={open} setOpen={setOpen}/>
-        { open && <Menu /> }
-        </div>
-
-
+  return (
+    <div>
+      <div style={{ overflow: "hidden" }}>
+        <Burger open={open} setOpen={setOpen} />
+        {open && <Menu setOpen={setOpen} />}
       </div>
-    )
-  }
-  export default BurgerMenu;
-  
+    </div>
+  );
+}
+export default BurgerMenu;

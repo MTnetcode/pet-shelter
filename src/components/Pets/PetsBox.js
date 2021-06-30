@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./pets.css";
 import PetsInfo from "../pets-info/petsInfo";
 function PetsBox({ id, img, name, text }) {
