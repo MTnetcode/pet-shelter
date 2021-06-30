@@ -14,6 +14,7 @@ function NewsDashboard() {
   const [getNews, setNews] = useState();
   const [addNew, setAddNew] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(loginVerifyService());
+  const [errorMsg, setErrorMsg] = useState("");
 
   async function returnNews() {
     setNews(await fetchNews());
@@ -47,6 +48,7 @@ function NewsDashboard() {
           setAddNew={setAddNew}
           addImg={false}
           where="news"
+          setErrorMsg={setErrorMsg}
         />
       )}
       {getNews !== undefined ? (
