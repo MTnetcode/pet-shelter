@@ -44,7 +44,7 @@ function Post({
       setShowWait(false);
     } else {
       setShowWait(false);
-      setErrorMsg("You post could not be created");
+      setErrorMsg("Your post could not be created");
     }
     setAddNew(false);
   };

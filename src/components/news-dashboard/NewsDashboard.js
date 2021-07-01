@@ -71,7 +71,7 @@ function NewsDashboard() {
         <Redirect
           to={{
             pathname: "/login",
-            state: { msg: "You have to log in first" },
+            state: { msg: errorMsg },
           }}
         />
       )}
