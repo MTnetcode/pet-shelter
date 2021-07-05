@@ -3,12 +3,13 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 80vh;
+  width: 100vh;
   margin: 0 auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 99;
 }
 .fa-times {
   position: absolute;
