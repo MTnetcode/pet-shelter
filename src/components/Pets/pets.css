@@ -1,88 +1,68 @@
-.pets{
-
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-justify-content: center;
-gap: 2rem;
-
+.pets {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
-.pets div{
-    flex-basis: 45%;
+.pets div {
+  flex-basis: 45%;
 }
-.pet-flex{
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: #EFEEF1;
-
-   
+.pet-flex {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: #efeef1;
+  text-align: center;
 }
 
-.pet-flex div{
-    flex-basis: 45%;
+.pet-flex div {
+  flex-basis: 45%;
 }
 
-.img{
-    height: 30vh;
+.img {
+  height: 30vh;
+  text-align: center;
 }
-.info{
-    margin-top: 1rem;
-    padding: .5rem;
-}
-
-.name{
-    font-size: 3rem;
-    font-weight: 600;
- 
-  
-}
-.pet-paragraph{
-    font-size: .8rem;
-    font-weight: 300;
-    
-    
-}
-em{
-    font-weight: 800;
+.info {
+  margin-top: 1rem;
+  padding: 0.5rem;
 }
 
-@media only screen and (max-width:767px) {
-    .pets{
-        margin: 0 1rem !important;
-     
-        flex-direction: column;
-        display: block !important;
+.name {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.pet-paragraph {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+em {
+  font-weight: 800;
+}
 
-        
+@media only screen and (max-width: 767px) {
+  .pets {
+    margin: 0 1rem !important;
 
-        }
-        .pets div{
-            flex-basis: 100%;
-          
-        }
-        .pet-flex{
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            width: 100%;
-            margin-bottom: 1rem;
-           
-        }
-
-        
-        .pet-flex div{
-            flex-basis: 100% !important;
-        }
-        
-  
-        .info{
-       
-            padding: 1rem;
-           
-           
-          
-        }
-        
-    
-    
+    flex-direction: row;
+    display: block !important;
   }
+  .pets div {
+    flex-basis: 100%;
+  }
+  .pet-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .pet-flex div {
+    flex-basis: 100% !important;
+  }
+
+  .info {
+    padding: 1rem;
+  }
+}

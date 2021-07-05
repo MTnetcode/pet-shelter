@@ -52,7 +52,7 @@ function PetsDashboard({ category }) {
           setErrorMsg={setErrorMsg}
         />
       )}
-      <div className="pets">
+      <div className="pets-dashboard">
         {getPets.length > 0 ? (
           getPets.map((pet) => (
             <PetsBoxDashboard
