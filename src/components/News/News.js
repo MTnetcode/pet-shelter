@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./news.css";
 import fetchNews from "../../services/fetchNews";
 import NewsBox from "./NewsBox.js";
+import Wait from "../reusable/Wait";
 function News() {
   const [getNews, setNews] = useState();
   async function returnNews() {
@@ -14,7 +15,7 @@ function News() {
     <div>
       <h3 className="news">News</h3>
       <div className="news-flex">
-        {getNews !== undefined &&
+        {getNews !== undefined ? (
           getNews.map((oneNew) => {
             return (
               <NewsBox
@@ -23,7 +24,10 @@ function News() {
                 text={oneNew.text}
               />
             );
-          })}
+          })
+        ) : (
+          <Wait msg="Getting news" />
+        )}
       </div>
     </div>
   );
