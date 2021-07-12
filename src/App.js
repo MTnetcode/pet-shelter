@@ -13,6 +13,7 @@ import NewsDashboard from "./components/news-dashboard/NewsDashboard.js";
 import PetsDashboard from "./components/pets-dashboard/PetsDashboard.js";
 import Delete from "./components/delete/delete.js";
 import Post from "./components/post/post.js";
+import Change from "./components/change/change"
 function App() {
   return (
     <div>
@@ -76,6 +77,9 @@ function App() {
           </Route>
           <Route path="/post">
             <Post />
+          </Route>
+          <Route path="/change">
+            <Change />
           </Route>
         </Switch>
       </BrowserRouter>
