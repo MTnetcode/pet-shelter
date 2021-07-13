@@ -9,12 +9,12 @@
 .plus:hover {
   transform: scale(1.3);
 }
+.pet-flex{
+  margin: 1rem;
+}
 .pets-dashboard {
   margin: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 3rem;
+  
 }
 
 .fa-plus {
@@ -28,13 +28,8 @@
   transform: scale(1.3);
 }
 
-.pets-dashboard div {
-  flex-basis: 45%;
-}
 .pet-flex-dashboard {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
+ 
   background-color: #efeef1;
   justify-content: center;
 }
@@ -43,9 +38,6 @@
   flex-basis: 48%;
 }
 
-.img {
-  height: 15rem;
-}
 .info {
   margin-top: 1rem;
   position: relative;
@@ -63,3 +55,5 @@
   font-size: 0.8rem;
   font-weight: 300;
 }
+
+
