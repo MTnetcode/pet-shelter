@@ -20,7 +20,7 @@
 .login-inp {
   display: block;
   background-color: hsla(0, 0%, 100%, 0.514);
-  color: #9a8c8c;
+  color: white;
   padding: 1rem;
   width: 100%;
   border: none;
@@ -115,7 +115,6 @@
   .login-inp {
     display: block;
     background-color: hsla(0, 0%, 100%, 0.514);
-    color: #9a8c8c;
     padding: 1rem;
     width: 100%;
     border: none;
