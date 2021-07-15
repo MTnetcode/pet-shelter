@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./change.css";
 
-function Change() {
+function Change({id, setOpenEditBox, name, text}) {
+  const [formData, setFormData] = useState({
+    name: name,
+    text: text,
+    img: "",
+  });
   return (
     <div>
       <div className="rose">
@@ -9,7 +14,7 @@ function Change() {
           <div className="image"></div>
 
           <div>
-            <input className="head" type="text" value="Emma" /> <br />
+            <input className="head" type="text" value={formData.name} /> <br />
             <textarea
               className="area"
               onInput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
@@ -22,7 +27,7 @@ function Change() {
             <strong>If you are interest please check terms of adoption</strong> <br />
             <div className="butt">
             <button className='btn'>Save</button>
-            <button className='btn'>Cancle</button>
+            <button className='btn' onClick={() => setOpenEditBox(false)}>Cancel</button>
             </div>
 
           </div>

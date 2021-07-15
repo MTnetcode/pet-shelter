@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import Delete from "../delete/delete";
+import Change from "../change/change"
 import "./petsDashboard.css";
 function PetsBoxDashboard({ id, img, name, text, deletePost }) {
   const [openDelete, setOpenDelete] = useState(false);
+  const [openEditBox, setOpenEditBox] = useState(false)
   return (
     <div className="pet-flex">
       <div className="img-div">
@@ -11,7 +13,7 @@ function PetsBoxDashboard({ id, img, name, text, deletePost }) {
       </div>
       <div className="info">
         <div className="change-icons">
-          <i class="fas fa-pen fa-2x fachange"></i>
+          <i class="fas fa-pen fa-2x fachange" onClick={() => setOpenEditBox(true)}></i>
           <i
             class="fas fa-2x fa-trash fachange"
             onClick={() => {
@@ -30,6 +32,7 @@ function PetsBoxDashboard({ id, img, name, text, deletePost }) {
           where="pets"
         />
       )}
+  {openEditBox && <Change setOpenEditBox={setOpenEditBox} id={id} name={name} text={text} />}
     </div>
   );
 }
