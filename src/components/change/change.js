@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./change.css";
+import updatePost from "../../services/updatePost";
 
 function Change({ id, setOpenEditBox, name, text }) {
   const [formData, setFormData] = useState({
@@ -10,6 +11,17 @@ function Change({ id, setOpenEditBox, name, text }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await updatePost(formData);
+    if (res) {
+      console.log("success");
+    } else {
+      console.log("fail");
+    }
+    setOpenEditBox(false);
   };
   return (
     <div>
@@ -37,7 +49,9 @@ function Change({ id, setOpenEditBox, name, text }) {
             />
             <br />
             <div className="butt">
-              <button className="btn">Save</button>
+              <button className="btn" onClick={handleSubmit}>
+                Save
+              </button>
               <button className="btn" onClick={() => setOpenEditBox(false)}>
                 Cancel
               </button>
