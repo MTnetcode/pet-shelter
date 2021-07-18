@@ -4,6 +4,7 @@ import updatePost from "../../services/updatePost";
 
 function Change({ id, setOpenEditBox, name, text }) {
   const [formData, setFormData] = useState({
+    id: id,
     name: name,
     text: text,
   });
