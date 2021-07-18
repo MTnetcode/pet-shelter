@@ -1,12 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./change.css";
 
-function Change({id, setOpenEditBox, name, text}) {
+function Change({ id, setOpenEditBox, name, text }) {
   const [formData, setFormData] = useState({
     name: name,
     text: text,
-    img: "",
   });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
   return (
     <div>
       <div className="rose">
@@ -14,22 +18,30 @@ function Change({id, setOpenEditBox, name, text}) {
           <div className="image"></div>
 
           <div>
-            <input className="head" type="text" value={formData.name} /> <br />
+            <input
+              className="head"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+              name="name"
+            />{" "}
+            <br />
             <textarea
               className="area"
-              onInput='this.style.height = "";this.style.height = this.scrollHeight + "px"'
+              onChange={handleChange}
               shape=""
               href=""
+              name="text"
               alt=""
-              value=" Pellentesque tincidunt tristique neque, eget venenatis enim gravida quis. Fusce at egestas libero. Cras convallis egestas ullamcorper. Suspendisse sed ultricies nisl, pharetra rutrum mauris. Vestibulum at massa dui. Morbi et purus velit. Etiam tristique, justo eu condimentum efficitur, purus velit facilisis sem, id fringilla tortor quam quis dolor. Praesent ultricies dignissim ex, at volutpat sapien ullamcorper rhoncus. Curabitur quam velit, ullamcorper ut congue eget, convallis et velit. Donec placerat, magna eu venenatis tempus, dui sapien aliquam libero, sit amet maximus erat massa quis nisi. Integer pharetra auctor arcu, non tincidunt dui fermentum ut. Nullam interdum sapien id mauris dapibus, a pharetra purus rhoncus. Nullam viverra iaculis tristique. Donec quis mauris ipsum. Nunc vehicula magna at erat tristique rutrum."
+              value={formData.text}
             />
             <br />
-            <strong>If you are interest please check terms of adoption</strong> <br />
             <div className="butt">
-            <button className='btn'>Save</button>
-            <button className='btn' onClick={() => setOpenEditBox(false)}>Cancel</button>
+              <button className="btn">Save</button>
+              <button className="btn" onClick={() => setOpenEditBox(false)}>
+                Cancel
+              </button>
             </div>
-
           </div>
         </div>
       </div>
