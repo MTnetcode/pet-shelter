@@ -16,12 +16,11 @@ function Change({ id, setOpenEditBox, name, text }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await updatePost(formData);
-    if (res) {
-      console.log("success");
-    } else {
-      console.log("fail");
-    }
+    let newForm = new FormData();
+    newForm.append("id", formData.id);
+    newForm.append("name", formData.name);
+    newForm.append("text", formData.text);
+    await updatePost(newForm);
     setOpenEditBox(false);
   };
   return (
