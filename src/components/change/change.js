@@ -20,13 +20,7 @@ function Change({ id, setOpenEditBox, name, text }) {
     newForm.append("id", formData.id);
     newForm.append("name", formData.name);
     newForm.append("text", formData.text);
-    console.log(newForm.getAll("id"));
-    const res = await updatePost(newForm);
-    if (res) {
-      console.log("success");
-    } else {
-      console.log("fail");
-    }
+    await updatePost(newForm);
     setOpenEditBox(false);
   };
   return (
