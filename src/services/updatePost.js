@@ -9,7 +9,7 @@ export default async function updatePost(formData) {
     const res = await fetch(`${SERVER}/api/pets`, {
       method: "PATCH",
       headers: headers,
-      body: JSON.stringify(formData),
+      body: formData,
     });
     const data = res.json();
     return data.data ? true : false;

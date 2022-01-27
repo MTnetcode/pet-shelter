@@ -1,1 +1,1 @@
-export const SERVER = "https://tomdev-pet-shelter-api.herokuapp.com";
+export const SERVER = "localhost:5555";
