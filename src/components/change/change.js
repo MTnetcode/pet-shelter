@@ -16,8 +16,11 @@ function Change({ id, setOpenEditBox, name, text }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let newForm = new FormData(e.target.form);
-    console.log(e.target.form);
+    let newForm = new FormData();
+    newForm.append("id", formData.id);
+    newForm.append("name", formData.name);
+    newForm.append("text", formData.text);
+    console.log(newForm.getAll("id"));
     const res = await updatePost(newForm);
     if (res) {
       console.log("success");
@@ -31,39 +34,35 @@ function Change({ id, setOpenEditBox, name, text }) {
       <div className="rose">
         <div className="white">
           <div className="image"></div>
-          <form name="form">
-            <div>
-              <input
-                className="head"
-                type="text"
-                value={formData.name}
-                onChange={handleChange}
-                name="name"
-              />{" "}
-              <br />
-              <textarea
-                className="area"
-                onChange={handleChange}
-                shape=""
-                href=""
-                name="text"
-                alt=""
-                value={formData.text}
-              />
-              <br />
-              <div className="butt">
-                <input
-                  type="submit"
-                  onClick={handleSubmit}
-                  value="save"
-                  className="btn"
-                />
-                <button className="btn" onClick={() => setOpenEditBox(false)}>
-                  Cancel
-                </button>
-              </div>
+
+          <div>
+            <input
+              className="head"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+              name="name"
+            />{" "}
+            <br />
+            <textarea
+              className="area"
+              onChange={handleChange}
+              shape=""
+              href=""
+              name="text"
+              alt=""
+              value={formData.text}
+            />
+            <br />
+            <div className="butt">
+              <button className="btn" onClick={handleSubmit}>
+                Save
+              </button>
+              <button className="btn" onClick={() => setOpenEditBox(false)}>
+                Cancel
+              </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

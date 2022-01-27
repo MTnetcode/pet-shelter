@@ -2,6 +2,7 @@ import getToken from "./getToken";
 import { SERVER } from "./serverConst";
 
 export default async function updatePost(formData) {
+  console.log(formData);
   const token = getToken();
   if (token) {
     const headers = new Headers();
